@@ -1,0 +1,10 @@
+{
+  "tg_token": "",
+  "msg_en": {
+    "start_msg": "Welcome to CBot!\nAvailable commands:\n{commands}",
+    "available_commands": "/help - get all available commands\n/calendar - calendar of upcoming events\n/pos - current positions"
+
+  },
+  "upcoming_events_url": "https://ctftime.org/event/list/upcoming/rss/",
+  "team_id": ""
+}
