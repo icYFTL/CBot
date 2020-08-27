@@ -35,7 +35,6 @@ async def command_help(message: types.Message):
 @dp.message_handler(commands=['pos'])
 async def command_pos(message: types.Message):
     repl = get_team(config['team_id'])
-
     await message.reply(text=generate_position(repl))
 
 

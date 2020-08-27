@@ -1,5 +1,4 @@
 FROM python:3
-EXPOSE 8001
 
 RUN mkdir /opt/app
 WORKDIR /opt/app
