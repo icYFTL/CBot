@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  server:
+    image: cbot
+    build: .
+    command: python3 CBot.py
+    ports:
+      - 8001:8001
+    restart: always
