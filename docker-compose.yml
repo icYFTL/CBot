@@ -4,6 +4,4 @@ services:
     image: cbot
     build: .
     command: python3 CBot.py
-    ports:
-      - 8001:8001
     restart: always
