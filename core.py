@@ -7,7 +7,7 @@ logging.basicConfig(filename='cbot.log', level=logging.INFO,
                     format='%(asctime)-15s | [%(name)s] %(levelname)s => %(message)s')
 
 config = json.load(open('config.json', 'r'))
-text = config['msg_en']
+text = json.load(open('alpha.json', 'r'))['msg_en']
 
 bot = Bot(token=config['tg_token'])
 dp = Dispatcher(bot)

@@ -29,23 +29,27 @@ def generate_calendar() -> str:
 async def command_calendar(message: types.Message):
     await message.reply(text=generate_calendar() ,parse_mode='MarkdownV2')
 
-@dp.message_handler(commands=['join'])
-async def command_join(message: types.Message):
-    await message.reply('This function not implemented yet')
-    return
+@dp.message_handler(commands=['fool'])
+async def fool_handler(message: types.Message):
+    await message.reply('Семен \(@Frovy\) сегодня гандон\.\nКаждый день избирается новый гандон\. Может быть им станешь именно ты\!', parse_mode='MarkdownV2')
 
-    import re
-    import pytz
-    try:
-        id = int(message.text.split()[1])
-    except:
-        await message.reply('Bad ID passed')
-        return
-
-    event = get_event(id)['finish']
-    event = re.sub(r'\+.*', '', event)
-
-
-    if datetime.strptime(get_event(id)['finish'], '%Y-%m-%dT%H:%M%S') <= datetime.now(pytz.timezone('Europe/Moscow')): # ISO 8601
-        await message.reply('CTF with this ID already finished.')
-        return
+# @dp.message_handler(commands=['join'])
+# async def command_join(message: types.Message):
+#     await message.reply('This function not implemented yet')
+#     return
+#
+#     import re
+#     import pytz
+#     try:
+#         id = int(message.text.split()[1])
+#     except:
+#         await message.reply('Bad ID passed')
+#         return
+#
+#     event = get_event(id)['finish']
+#     event = re.sub(r'\+.*', '', event)
+#
+#
+#     if datetime.strptime(get_event(id)['finish'], '%Y-%m-%dT%H:%M%S') <= datetime.now(pytz.timezone('Europe/Moscow')): # ISO 8601
+#         await message.reply('CTF with this ID already finished.')
+#         return

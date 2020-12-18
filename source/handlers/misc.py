@@ -1,4 +1,4 @@
-from core import dp, text, config
+from core import dp, text
 from aiogram import types
 from source.handlers.api.ctftime_api import *
 
@@ -34,7 +34,7 @@ async def command_help(message: types.Message):
 
 @dp.message_handler(commands=['pos'])
 async def command_pos(message: types.Message):
-    repl = get_team(config['team_id'])
+    repl = get_team(config['ctftime']['team_id'])
     await message.reply(text=generate_position(repl))
 
 
