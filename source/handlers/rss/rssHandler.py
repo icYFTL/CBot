@@ -6,7 +6,7 @@ from source.abstract.Event import Event
 
 
 def get_upcoming_events() -> list:
-    d = feedparser.parse(config['upcoming_events_url'])
+    d = feedparser.parse(config['ctftime']['upcoming_events_url'])
     data = list()
     logging.getLogger('RSS')
 
